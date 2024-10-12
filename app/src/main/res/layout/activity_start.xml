@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/tvImgStart"
+        android:src="@drawable/start"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvEnjoy"
+        android:text="Enjoy Restaurant Quality Meals\nat Home"
+        android:textSize="@dimen/_18sdp"
+        android:gravity="center"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textColor="@color/red"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvImgStart"
+        app:layout_constraintStart_toStartOf="@id/tvImgStart"
+        app:layout_constraintEnd_toEndOf="@id/tvImgStart"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:text="Next"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/yeonsung_regular"
+        android:background="@drawable/layout_next"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvEnjoy"
+        app:layout_constraintStart_toStartOf="@id/tvEnjoy"
+        app:layout_constraintEnd_toEndOf="@id/tvEnjoy">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:id="@+id/tvBottom"
+        android:text="Design By\nNeatRoots"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/red"
+        android:fontFamily="@font/yeonsung_regular"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnNext"
+        app:layout_constraintStart_toStartOf="@id/btnNext"
+        app:layout_constraintEnd_toEndOf="@id/btnNext"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

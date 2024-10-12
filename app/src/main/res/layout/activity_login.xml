@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/tvImg"
+        android:src="@drawable/logo"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvFood"
+        android:text="@string/app_name"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textColor="@color/red"
+        android:textSize="@dimen/_25sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvImg"
+        app:layout_constraintStart_toStartOf="@id/tvImg"
+        app:layout_constraintEnd_toEndOf="@id/tvImg"/>
+
+    <TextView
+        android:id="@+id/tvFavoriteFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_FavoriteFoods"
+        android:textColor="@color/red"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvFood"
+        app:layout_constraintStart_toStartOf="@id/tvFood"
+        app:layout_constraintEnd_toEndOf="@id/tvFood"/>
+
+    <TextView
+        android:id="@+id/tvLoginAccount"
+        android:text="Login To Your Account"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/red"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvFavoriteFood"
+        app:layout_constraintStart_toStartOf="@id/tvFavoriteFood"
+        app:layout_constraintEnd_toEndOf="@id/tvFavoriteFood"/>
+
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:hint="Email or Phone number"
+        android:background="@drawable/buttonwhite"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvLoginAccount"
+        app:layout_constraintStart_toStartOf="@id/tvLoginAccount"
+        app:layout_constraintEnd_toEndOf="@id/tvLoginAccount"/>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:hint="Password"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:background="@drawable/buttonwhite"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintTop_toBottomOf="@id/edtEmail"
+        app:layout_constraintStart_toStartOf="@id/edtEmail"
+        app:layout_constraintEnd_toEndOf="@id/edtEmail"/>
+
+    <TextView
+        android:id="@+id/tvContinue"
+        android:text="Or\n Continue With"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edtPassword"
+        app:layout_constraintStart_toStartOf="@id/edtPassword"
+        app:layout_constraintEnd_toEndOf="@id/edtPassword"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_FaceBook"
+        android:drawableLeft="@drawable/facebook_icon"
+        android:text="Facebook"
+        android:textAllCaps="false"
+        android:layout_width="@dimen/_115sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:background="@drawable/buttonwhite"
+        app:layout_constraintEnd_toStartOf="@id/btn_Google"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvContinue">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Google"
+        android:text="Google"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/google_icon"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/buttonwhite"
+        android:paddingLeft="@dimen/_15sdp"
+        android:layout_width="@dimen/_115sdp"
+        android:layout_height="@dimen/_32sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvContinue"
+        app:layout_constraintStart_toEndOf="@id/btn_FaceBook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Login"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_15sdp"
+        android:fontFamily="@font/yeonsung_regular"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/layout_next"
+        android:textColor="@color/white"
+        android:layout_width="@dimen/_115sdp"
+        android:layout_height="@dimen/_35sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Google">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:id="@+id/tvDontAccount"
+        android:text="Don't Have Account?"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/red"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_Login"
+        app:layout_constraintStart_toStartOf="@id/btn_Login"
+        app:layout_constraintEnd_toEndOf="@id/btn_Login"/>
+
+    <TextView
+        android:id="@+id/tvBottom"
+        android:text="Design By\nNeatRoots"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/red"
+        android:fontFamily="@font/yeonsung_regular"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvDontAccount"
+        app:layout_constraintStart_toStartOf="@id/tvDontAccount"
+        app:layout_constraintEnd_toEndOf="@id/tvDontAccount"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
