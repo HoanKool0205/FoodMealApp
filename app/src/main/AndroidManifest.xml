@@ -14,36 +14,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EnglishApp"
         tools:targetApi="31">
+
         <activity
             android:name=".activity.MealActivity"
             android:exported="false" />
-        <activity
-            android:name=".adapter.ItemTabActivity"
-            android:exported="false" />
+
         <activity
             android:name=".activity.ChooseLocationActivity"
             android:exported="false" />
+
         <activity
             android:name=".activity.StartActivity"
             android:exported="false" />
+
         <activity
             android:name=".activity.SplashActivity"
             android:exported="true" />
+
         <activity
             android:name=".activity.RegisterActivity"
             android:exported="false" />
+
         <activity
             android:name=".activity.LoginActivity"
             android:exported="false" />
+
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.CategoryMealsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

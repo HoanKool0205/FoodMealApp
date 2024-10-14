@@ -108,7 +108,7 @@
         android:fontFamily="@font/yeonsung_regular"
         android:text="Category"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="@dimen/_20ssp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/rec_view_meals_popular"
         app:layout_constraintTop_toBottomOf="@id/rec_view_meals_popular" />
@@ -127,7 +127,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_category"
         >
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
+            android:id="@+id/rec_View_Category"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none" />

@@ -10,18 +10,14 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.androidexp.englishapp.fragment.CartFragment"
-        tools:layout="@layout/fragment_cart" />
+        android:name="com.androidexp.englishapp.fragment.CategoryFragment"
+        tools:layout="@layout/fragment_category" />
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.androidexp.englishapp.fragment.SearchFragment"
         tools:layout="@layout/fragment_search" />
     <fragment
-        android:id="@+id/historyFragment"
-        android:name="com.androidexp.englishapp.fragment.HistoryFragment"
-        tools:layout="@layout/fragment_history" />
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.androidexp.englishapp.fragment.ProfileFragment"
-        tools:layout="@layout/fragment_profile" />
+        android:id="@+id/favoritesFragment"
+        android:name="com.androidexp.englishapp.fragment.FavoritesFragment"
+        tools:layout="@layout/fragment_favorites" />
 </navigation>
