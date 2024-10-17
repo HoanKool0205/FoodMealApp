@@ -3,7 +3,6 @@ package com.androidexp.englishapp.adapter
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.os.persistableBundleOf
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +10,7 @@ import com.androidexp.englishapp.databinding.MealItemBinding
 import com.androidexp.englishapp.model.Meal
 import com.bumptech.glide.Glide
 
-class FavoritesMealAdapter:RecyclerView.Adapter<FavoritesMealAdapter.FavoritesMealsAdapterViewHolder>() {
+class MealsAdapter:RecyclerView.Adapter<MealsAdapter.FavoritesMealsAdapterViewHolder>() {
 
     inner class FavoritesMealsAdapterViewHolder(val binding:MealItemBinding) :RecyclerView.ViewHolder(binding.root)
 

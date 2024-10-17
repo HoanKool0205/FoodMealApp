@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.androidexp.englishapp.activity.CategoryMealsActivity
 import com.androidexp.englishapp.MainActivity
+import com.androidexp.englishapp.R
 import com.androidexp.englishapp.activity.MealActivity
 import com.androidexp.englishapp.adapter.CategoriesAdapter
 import com.androidexp.englishapp.adapter.MostPopularAdapter
@@ -68,9 +70,17 @@ class HomeFragment : Fragment() {
         prepareCategoriesRecyclerView()
         viewModel.getCategories()
         observeCategoriesLiveData()
-
         onCategoryClick()
 
+        onSearchIconClick()
+
+
+    }
+
+    private fun onSearchIconClick() {
+        binding.imgSearch.setOnClickListener{
+            findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
+        }
     }
 
     private fun onCategoryClick() {

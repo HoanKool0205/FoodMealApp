@@ -1,6 +1,5 @@
 package com.androidexp.englishapp.fragment
 
-import android.content.ClipData.Item
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -12,21 +11,19 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.androidexp.englishapp.MainActivity
-import com.androidexp.englishapp.adapter.FavoritesMealAdapter
+import com.androidexp.englishapp.adapter.MealsAdapter
 import com.androidexp.englishapp.databinding.FragmentFavoritesBinding
 import com.androidexp.englishapp.videoModel.HomeViewModel
 import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.tabs.TabLayout.ViewPagerOnTabSelectedListener
 
 class FavoritesFragment : Fragment() {
     private lateinit var binding: FragmentFavoritesBinding
     private lateinit var viewModel: HomeViewModel
-    private lateinit var favoritesAdapter: FavoritesMealAdapter
+    private lateinit var favoritesAdapter: MealsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Lấy viewModel từ MainActivity
         viewModel = (activity as MainActivity).viewModel
     }
 
@@ -71,7 +68,7 @@ class FavoritesFragment : Fragment() {
     }
 
     private fun prepareRecyclerView() {
-        favoritesAdapter = FavoritesMealAdapter()
+        favoritesAdapter = MealsAdapter()
         binding.rvFavorites.apply {
             layoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
             adapter = favoritesAdapter
