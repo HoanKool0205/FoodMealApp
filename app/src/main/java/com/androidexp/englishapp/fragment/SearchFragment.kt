@@ -6,14 +6,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.androidexp.englishapp.MainActivity
 import com.androidexp.englishapp.adapter.MealsAdapter
 import com.androidexp.englishapp.databinding.FragmentSearchBinding
 import com.androidexp.englishapp.model.Meal
 import com.androidexp.englishapp.videoModel.HomeViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class SearchFragment : Fragment() {
     private lateinit var binding: FragmentSearchBinding
@@ -41,6 +46,15 @@ class SearchFragment : Fragment() {
         binding.btnSearchArrow.setOnClickListener { searchMeals() }
 
         observeSearchedMealsLiveData()
+
+        var searchJob: Job? = null
+        binding.edSearchBox.addTextChangedListener{ searchQuery ->
+            searchJob?.cancel()
+            searchJob = lifecycleScope.launch {
+                delay(200)
+                viewModel.searchMeals(searchQuery.toString())
+            }
+        }
     }
 
     private fun observeSearchedMealsLiveData() {
