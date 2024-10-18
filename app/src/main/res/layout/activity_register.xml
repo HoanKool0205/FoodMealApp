@@ -54,8 +54,8 @@
         app:layout_constraintEnd_toEndOf="@id/tvFavoriteFood"/>
 
     <EditText
-        android:id="@+id/edtName"
-        android:hint="Name"
+        android:id="@+id/edtEmail"
+        android:hint="Email or Phone number"
         android:drawableLeft="@drawable/user"
         android:drawablePadding="@dimen/_10sdp"
         android:background="@drawable/buttonwhite"
@@ -68,8 +68,8 @@
         app:layout_constraintEnd_toEndOf="@id/tvSignUpAccount"/>
 
     <EditText
-        android:id="@+id/edtEmail"
-        android:hint="Email or Phone number"
+        android:id="@+id/edtPassword"
+        android:hint="Password"
         android:drawableLeft="@drawable/email"
         android:drawablePadding="@dimen/_10sdp"
         android:background="@drawable/buttonwhite"
@@ -77,13 +77,13 @@
         android:paddingLeft="@dimen/_15sdp"
         android:layout_width="@dimen/_280sdp"
         android:layout_height="@dimen/_40sdp"
-        app:layout_constraintTop_toBottomOf="@id/edtName"
-        app:layout_constraintStart_toStartOf="@id/edtName"
-        app:layout_constraintEnd_toEndOf="@id/edtName"/>
+        app:layout_constraintTop_toBottomOf="@id/edtEmail"
+        app:layout_constraintStart_toStartOf="@id/edtEmail"
+        app:layout_constraintEnd_toEndOf="@id/edtEmail"/>
 
     <EditText
-        android:id="@+id/edtPassword"
-        android:hint="Password"
+        android:id="@+id/edtConfirmPassword"
+        android:hint="Confirm Password"
         android:drawableLeft="@drawable/lock"
         android:drawablePadding="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_15sdp"
@@ -91,9 +91,9 @@
         android:background="@drawable/buttonwhite"
         android:layout_width="@dimen/_280sdp"
         android:layout_height="@dimen/_40sdp"
-        app:layout_constraintTop_toBottomOf="@id/edtEmail"
-        app:layout_constraintStart_toStartOf="@id/edtEmail"
-        app:layout_constraintEnd_toEndOf="@id/edtEmail"/>
+        app:layout_constraintTop_toBottomOf="@id/edtPassword"
+        app:layout_constraintStart_toStartOf="@id/edtPassword"
+        app:layout_constraintEnd_toEndOf="@id/edtPassword"/>
 
     <TextView
         android:id="@+id/tvContinue"
@@ -105,9 +105,9 @@
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/edtPassword"
-        app:layout_constraintStart_toStartOf="@id/edtPassword"
-        app:layout_constraintEnd_toEndOf="@id/edtPassword"/>
+        app:layout_constraintTop_toBottomOf="@id/edtConfirmPassword"
+        app:layout_constraintStart_toStartOf="@id/edtConfirmPassword"
+        app:layout_constraintEnd_toEndOf="@id/edtConfirmPassword"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_FaceBook"
@@ -142,7 +142,7 @@
     </androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_Login"
+        android:id="@+id/btn_SignUp"
         android:text="Create Account"
         android:textAllCaps="false"
         android:textSize="@dimen/_15sdp"
@@ -158,16 +158,16 @@
     </androidx.appcompat.widget.AppCompatButton>
 
     <TextView
-        android:id="@+id/tvDontAccount"
-        android:text="Already Have An Account?"
+        android:id="@+id/tvDontAccountSignUp"
+        android:text="Already Have An Account? Login"
         android:textSize="@dimen/_10sdp"
         android:textColor="@color/red"
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_Login"
-        app:layout_constraintStart_toStartOf="@id/btn_Login"
-        app:layout_constraintEnd_toEndOf="@id/btn_Login"/>
+        app:layout_constraintTop_toBottomOf="@id/btn_SignUp"
+        app:layout_constraintStart_toStartOf="@id/btn_SignUp"
+        app:layout_constraintEnd_toEndOf="@id/btn_SignUp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
