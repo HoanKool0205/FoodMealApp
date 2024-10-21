@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.androidexp.englishapp.databinding.MealItemBinding
+import com.androidexp.englishapp.model.Category
 import com.androidexp.englishapp.model.Meal
+import com.androidexp.englishapp.model.MealList
 import com.bumptech.glide.Glide
 
 class MealsAdapter:RecyclerView.Adapter<MealsAdapter.FavoritesMealsAdapterViewHolder>() {
@@ -46,6 +48,7 @@ class MealsAdapter:RecyclerView.Adapter<MealsAdapter.FavoritesMealsAdapterViewHo
         val meal = differ.currentList[position]
         Glide.with(holder.itemView).load(meal.strMealThumb).into(holder.binding.imgMeal)
         holder.binding.tvMealName.text = meal.strMeal
+
     }
 
 }

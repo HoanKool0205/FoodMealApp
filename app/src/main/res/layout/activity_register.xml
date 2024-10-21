@@ -56,7 +56,7 @@
     <EditText
         android:id="@+id/edtEmail"
         android:hint="Email or Phone number"
-        android:drawableLeft="@drawable/user"
+        android:drawableLeft="@drawable/email"
         android:drawablePadding="@dimen/_10sdp"
         android:background="@drawable/buttonwhite"
         android:layout_marginTop="@dimen/_15sdp"
@@ -70,7 +70,7 @@
     <EditText
         android:id="@+id/edtPassword"
         android:hint="Password"
-        android:drawableLeft="@drawable/email"
+        android:drawableLeft="@drawable/lock"
         android:drawablePadding="@dimen/_10sdp"
         android:background="@drawable/buttonwhite"
         android:layout_marginTop="@dimen/_15sdp"
